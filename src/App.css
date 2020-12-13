@@ -36,3 +36,162 @@
     transform: rotate(360deg);
   }
 }
+
+/* **************** Font ************************* */
+@font-face{
+  font-family: 'Brandon Grotesque';
+  src: url('assets/font/BrandonGrotesque-Bold.woff2') format('woff2'),
+      url('assets/font/BrandonGrotesque-Bold.woff') format('woff'),
+      url('assets/font/BrandonGrotesque-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* **************** Header ************************ */
+div.header{
+  position: sticky;           /* other browsers */
+  position: -webkit-sticky;   /* safari */
+  background-color:lightcyan;
+  top: 0px;
+  padding: 20px;
+	overflow: hidden;
+  z-index: 9999;
+  width: 100%;
+}
+
+/* **************** TopButton ********************** */
+div.top-button{
+  padding:20px;
+  margin:20px;
+}
+
+div.top-button button{
+  font-family: Brandon Grotesque;
+  background-color: #1B5288;
+  border-radius: 9999em 0 0 9999em;
+  position: relative;
+  margin-left: -1em;
+  padding-right: 1em;
+}
+
+span.text-after-logo{
+  margin: 5px;
+  color: gray;
+  font-size: 14px;
+}
+
+/* ***************** Icon ************************** */
+.icon-refresh{
+  background-image: url(./assets/icon/refresh.png);
+  background-size: cover;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+
+.icon-select{
+  background-image: url(./assets/icon/select.png);
+  background-size: cover;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+
+.icon-sort{
+  background-image: url(./assets/icon/sort.png);
+  background-size: cover;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+
+
+/* ****************** LeftLaunch ********************** */
+div.left-launch{
+  padding: 20px;
+  margin: 20px;
+}
+
+/* ****************** ListBox ************************** */
+div.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-year{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.yearOption{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Brandon Grotesque;
+}
+
+.yearOption:hover{
+  background-color: #f1f1f1;
+}
+
+div.dropdown:hover .dropdown-year{
+  display: block;
+}
+
+
+div.list-button{
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.list-button button{
+  font-family: Brandon Grotesque;
+  margin: 5px;
+  background-color: #1B5288;
+  position: relative;
+
+}
+
+div.list-item{
+  margin: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.col-number{
+  font-family: Brandon Grotesque;
+  font-size: 20px;
+  padding: 10px;
+  flex: 1 1 0;
+}
+
+.col-name{
+  font-family: Brandon Grotesque;
+  font-size: 20px;
+  padding: 10px;
+  flex: 3 1 0;
+}
+
+.col-date{
+  flex: 1 1 0;
+}
+
+.upper{
+  color: gray;
+  font-size: 10pt;
+  text-align: right;
+}
+
+.lower{
+  text-align: right;
+  font-family: Brandon Grotesque;
+  font-size: 18px;
+}
