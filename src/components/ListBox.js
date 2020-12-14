@@ -16,16 +16,13 @@ class ListBox extends Component{
 
     componentDidMount() {
         this.setState({ matchedYearLaunchLists: this.props.launchLists });
-        console.log("matchedLaunchList length:"+ this.state.matchedYearLaunchLists.length);
     }
 
     descendSort(){
-        console.log("Yes, descend launch list!");
         this.props.descendSort();
     }
 
     selectYear(event){
-        console.log("Yes, select year?"+event.target.value);
         this.props.selectYear(event.target.value);
     }
 

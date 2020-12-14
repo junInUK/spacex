@@ -24,7 +24,6 @@ class Container extends Component {
             this.setState({launchLists: result});
             let years = [];
             for(let i = 0; i < this.state.launchLists.length; i++){
-                console.log(years.indexOf(this.state.launchLists[i].launch_date_utc.substring(0,4)));
                 if(years.indexOf(this.state.launchLists[i].launch_date_utc.substring(0,4)) === -1){
                     years.push(this.state.launchLists[i].launch_date_utc.substring(0,4));
                 }
@@ -35,33 +34,20 @@ class Container extends Component {
     }
 
     selectYear(yearSelected){
-        console.log("In container, year selected:"+yearSelected);
         let matchedYearLaunchLists = [];
         for(let i = 0; i< this.state.launchLists.length; i++){
             let year = this.state.launchLists[i].launch_date_utc.substring(0,4);
-            console.log("launched year:["+ year+"]");
             if(year === yearSelected){
-                console.log(year + " == " + yearSelected)
                 matchedYearLaunchLists.push(this.state.launchLists[i]);
             }
         }
-        console.log("after match:");
-        for(let i = 0; i < matchedYearLaunchLists.length; i++){
-            console.log(matchedYearLaunchLists[i]);
-        }
-       
+        
         this.setState({
             launchLists: matchedYearLaunchLists
         });
-        
-        console.log("In state launch list:");
-        for(let i = 0; i<this.state.launchLists.length; i++){
-            console.log(this.state.launchLists[i].launch_date_utc);
-        }
     }
 
     descendSort(){
-        console.log("In container, descend sort!");
         let tempLaunchLists = [...this.state.launchLists];
         tempLaunchLists.sort(function(a,b){
             let aYear = a.launch_date_utc.substring(0,4);
@@ -70,8 +56,6 @@ class Container extends Component {
             let bYear = b.launch_date_utc.substring(0,4);
             let bMonth = b.launch_date_utc.substring(5,7);
             let bDate = b.launch_date_utc.substring(8,10);
-            console.log("a year:"+aYear+ " a month:" + aMonth + " a date:" + aDate +
-                       " b year:"+bYear+ " b month:" + bMonth + " b date:" + bDate);
             if(aYear < bYear){
                 return 1;
             }else if(aYear > bYear){
@@ -92,21 +76,17 @@ class Container extends Component {
                 }
             }    
         });
-        for(let i=0;i<tempLaunchLists.length;i++){
-            console.log(tempLaunchLists[i].launch_date_utc);
-        }
         this.setState({
             launchLists: tempLaunchLists
         })
     }
 
     reloadData(){
-        console.log("This is reloadData in the container!");
-        this.loadData()
+        this.loadData();
     }
 
     componentDidMount() {
-        this.loadData()
+        this.loadData();
     }
 
     render() {

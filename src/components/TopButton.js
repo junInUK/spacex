@@ -10,7 +10,6 @@ class TopButton extends Component{
     }
 
     reLoadData(){
-        console.log("yes, called reloadData!!!!!");
         this.props.pReloadData();
     }
 
