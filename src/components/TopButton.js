@@ -21,7 +21,9 @@ class TopButton extends Component{
                     <span className="text-after-logo">LAUNCHES</span>
                 </div>
                 <div className="col-sm-9 col-md-9 col-lg-6 text-right">
-                    <button className="btn btn-info" onClick={this.reLoadData}>Reload Data <span className="icon-refresh"> </span></button>
+                    <button id="reload-button" className="btn btn-info" onClick={this.reLoadData}>
+                        Reload Data <span className="icon-refresh"> </span>
+                    </button>
                 </div>
             </div>
         )

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders corrently 1`] = `
+<div
+  className="container"
+>
+  <TopButton
+    pReloadData={[Function]}
+  />
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-9 col-md-9 col-lg-5"
+    >
+      <LeftLaunch />
+    </div>
+    <div
+      className="col-sm-9 col-md-9 col-lg-7 text-right"
+    >
+      <ListBox
+        descendSort={[Function]}
+        launchLists={Array []}
+        noRepeatLaunchYears={Array []}
+        selectYear={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;

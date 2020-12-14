@@ -52,7 +52,9 @@ class ListBox extends Component{
                         <button className="btn btn-info fliter-year">
                             Filter by Year <span className="icon-select"> </span>
                         </button>
-                        <select className="dropdown-year" onChange={this.selectYear}>
+                        <select id="select-year" 
+                        className="dropdown-year" 
+                        onChange={this.selectYear}>
                             {noRepeatLaunchYearsWithA}
                         </select>
                         {/* <div className="dropdown-year"> */}
@@ -60,7 +62,9 @@ class ListBox extends Component{
                         {/* </div> */}
                         
                     </div>
-                    <button className="btn btn-info sort" onClick={this.descendSort}>
+                    <button id="sort-descend" 
+                    className="btn btn-info sort" 
+                    onClick={this.descendSort}>
                         Sort Descending <span className="icon-sort"> </span>
                     </button>
                 </div>
