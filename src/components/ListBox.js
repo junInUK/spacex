@@ -68,7 +68,9 @@ class ListBox extends Component{
                         Sort Descending <span className="icon-sort"> </span>
                     </button>
                 </div>
-                {launchLists}
+                <div id="launch-lists">
+                    {launchLists}
+                </div>
             </div>
         )
     }
