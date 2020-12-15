@@ -74,18 +74,11 @@ describe("Mounted Container", () => {
     it("should has 111 launch lists when the reload button is clicked", () => {
         const spy = jest.spyOn(Container.prototype, "reloadData");
         const wrapper = mount(<Container/>);
-        const topButton = wrapper.find("TopButton");
         const listBox = wrapper.find("ListBox");
         const launchDetails = listBox.find("LaunchDetail");
         wrapper.find("#reload-button").simulate("click");
-//        console.log(wrapper.instance().state.launchLists.length);
-//        console.log(wrapper.find(".list-item").to.have.lengthOf(111);
-//        console.log(launchDetails.lengthOf);
         console.log(wrapper.state('launchLists').length);
         expect(spy).toHaveBeenCalledTimes(1);
-//        expect(wrapper.find('.list-item')).to.have.lengthOf(111);
-//        expect(wrapper.find("div").length).toEqual(111);
-        // expect(listBox.containsMatchingElement(<LaunchDetail />)).toEqual(true);
     });
 
 });
